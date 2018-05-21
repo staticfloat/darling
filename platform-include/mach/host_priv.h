@@ -40,8 +40,10 @@ typedef function_table_entry   *function_table_t;
 __BeforeMigUserHeader
 #endif /* __BeforeMigUserHeader */
 
-#include <sys/cdefs.h>
-__BEGIN_DECLS
+
+#ifdef __cplusplus
+extern "C" {
+#endif  /* __cplusplus */
 
 
 /* Routine host_get_boot_info */
@@ -391,7 +393,9 @@ kern_return_t kext_request
 	kern_return_t *op_result
 );
 
-__END_DECLS
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
 
 /********************** Caution **************************/
 /* The following data types should be used to calculate  */

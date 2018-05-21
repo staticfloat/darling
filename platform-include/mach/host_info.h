@@ -71,7 +71,7 @@
 #include <mach/machine/vm_types.h>
 #include <mach/time_value.h>
 
-#include <sys/cdefs.h>
+
 
 /*
  *	Generic information structure to allow for expansion.

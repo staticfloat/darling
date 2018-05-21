@@ -41,8 +41,10 @@ typedef function_table_entry   *function_table_t;
 __BeforeMigUserHeader
 #endif /* __BeforeMigUserHeader */
 
-#include <sys/cdefs.h>
-__BEGIN_DECLS
+
+#ifdef __cplusplus
+extern "C" {
+#endif  /* __cplusplus */
 
 
 /* Routine host_info */
@@ -334,7 +336,9 @@ kern_return_t host_register_well_known_mach_voucher_attr_manager
 	ipc_voucher_attr_control_t *new_attr_control
 );
 
-__END_DECLS
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
 
 /********************** Caution **************************/
 /* The following data types should be used to calculate  */

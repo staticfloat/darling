@@ -45,11 +45,15 @@ struct port_obj_tentry {
 	int pos_type;
 };
 
-#include <sys/cdefs.h>
 
-__BEGIN_DECLS
+
+#ifdef __cplusplus
+extern "C" {
+#endif  /* __cplusplus */
 extern void port_obj_init(int);
-__END_DECLS
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
 
 extern struct port_obj_tentry *port_obj_table;
 extern int port_obj_table_size;

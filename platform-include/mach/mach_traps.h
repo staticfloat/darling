@@ -77,9 +77,11 @@
 
 #include <machine/endian.h>
 
-#include <sys/cdefs.h>
 
-__BEGIN_DECLS
+
+#ifdef __cplusplus
+extern "C" {
+#endif  /* __cplusplus */
 
 #ifndef	KERNEL
 
@@ -736,6 +738,8 @@ kern_return_t iokit_user_client_trap(
 
 #endif	/* KERNEL */
 
-__END_DECLS
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
 
 #endif	/* _MACH_MACH_TRAPS_H_ */

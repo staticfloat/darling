@@ -77,7 +77,7 @@
 #include <mach/kern_return.h>
 #include <mach/machine/vm_types.h>
 
-#include <sys/cdefs.h>
+
 #include <sys/appleapiopts.h>
 
 /*
@@ -799,7 +799,9 @@ typedef kern_return_t mach_msg_return_t;
                 /* Waiting for receive with timeout. (Internal use only.) */
 
 
-__BEGIN_DECLS
+#ifdef __cplusplus
+extern "C" {
+#endif  /* __cplusplus */
 
 /*
  *	Routine:	mach_msg_overwrite
@@ -857,7 +859,9 @@ extern kern_return_t		mach_voucher_deallocate(
 					mach_port_name_t voucher);
 
 
-__END_DECLS
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
 
 #endif	/* _MACH_MESSAGE_H_ */
 

@@ -86,7 +86,7 @@
 #ifndef	_MACH_PORT_H_
 #define _MACH_PORT_H_
 
-#include <sys/cdefs.h>
+
 #include <stdint.h>
 #include <mach/boolean.h>
 #include <mach/machine/vm_types.h>

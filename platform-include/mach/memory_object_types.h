@@ -77,7 +77,7 @@
 #include <mach/vm_types.h>
 #include <mach/machine/vm_types.h>
 
-#include <sys/cdefs.h>
+
 
 #define VM_64_BIT_DATA_OBJECTS
 

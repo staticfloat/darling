@@ -48,7 +48,7 @@
 #include <mach/machine/vm_types.h>
 #include <mach/memory_object_types.h>
 
-#include <sys/cdefs.h>
+
 
 #pragma pack(4)
 

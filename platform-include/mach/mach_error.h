@@ -64,9 +64,11 @@
 
 #include <mach/error.h>
 
-#include <sys/cdefs.h>
 
-__BEGIN_DECLS
+
+#ifdef __cplusplus
+extern "C" {
+#endif  /* __cplusplus */
 char		*mach_error_string(
 /*
  *	Returns a string appropriate to the error argument given
@@ -88,6 +90,8 @@ char		*mach_error_type(
  */
 	mach_error_t	error_value
 				);
-__END_DECLS
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
 
 #endif	/* _MACH_ERROR_ */

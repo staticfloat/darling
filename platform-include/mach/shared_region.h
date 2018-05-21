@@ -30,7 +30,7 @@
 #ifndef _MACH_SHARED_REGION_H_
 #define _MACH_SHARED_REGION_H_
 
-#include <sys/cdefs.h>
+
 #include <mach/vm_prot.h>
 #include <mach/vm_types.h>
 #include <mach/mach_types.h>
@@ -110,13 +110,17 @@ struct shared_file_mapping_np {
 #define VM_PROT_SLIDE  0x20  /* must not interfere with normal prot assignments */
 
 
-__BEGIN_DECLS
+#ifdef __cplusplus
+extern "C" {
+#endif  /* __cplusplus */
 int	shared_region_check_np(uint64_t	*startaddress);
 int	shared_region_map_np(int fd,
 			     uint32_t mappingCount,
 			     const struct shared_file_mapping_np *mappings);
 int	shared_region_slide_np(void);
-__END_DECLS
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
 
 
 #endif /* _MACH_SHARED_REGION_H_ */

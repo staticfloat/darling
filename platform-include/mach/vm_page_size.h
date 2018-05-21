@@ -31,9 +31,11 @@
 
 #include <Availability.h>
 #include <mach/mach_types.h>
-#include <sys/cdefs.h>
 
-__BEGIN_DECLS
+
+#ifdef __cplusplus
+extern "C" {
+#endif  /* __cplusplus */
 
  /*
   *	Globally interesting numbers.
@@ -63,6 +65,8 @@ extern	int		vm_kernel_page_shift	__OSX_AVAILABLE_STARTING(__MAC_10_9, __IPHONE_7
 #define trunc_page_kernel(x)   ((x) & (~vm_kernel_page_mask))
 #define round_page_kernel(x)   trunc_page_kernel((x) + vm_kernel_page_mask)
 
-__END_DECLS
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
 
 #endif

@@ -75,7 +75,7 @@
 
 #include <stdint.h>
 
-#include <sys/cdefs.h>
+
 
 #include <mach/host_info.h>
 #include <mach/host_notify.h>

@@ -41,7 +41,7 @@
 #include <mach/message.h>
 #include <mach/vm_types.h>
 
-#include <sys/cdefs.h>
+
 
 #if defined(MACH_KERNEL)
 
@@ -141,7 +141,9 @@ typedef struct mig_symtab {
 } mig_symtab_t;
 
 
-__BEGIN_DECLS
+#ifdef __cplusplus
+extern "C" {
+#endif  /* __cplusplus */
 
 /* Client side reply port allocate */
 extern mach_port_t mig_get_reply_port(void);
@@ -163,6 +165,8 @@ extern void mig_allocate(vm_address_t *, vm_size_t);
 extern void mig_deallocate(vm_address_t, vm_size_t);
 
 
-__END_DECLS
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
 
 #endif	/* _MACH_MIG_H_ */

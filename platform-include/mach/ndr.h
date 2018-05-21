@@ -33,7 +33,7 @@
 #define _MACH_NDR_H_
 
 #include <stdint.h>
-#include <sys/cdefs.h>
+
 #include <libkern/OSByteOrder.h>
 
 
@@ -110,7 +110,9 @@ extern NDR_record_t NDR_record;
 #define __NDR_READSWAP__uint64_t(a)	OSReadSwapInt64((void *)a, 0)
 #define __NDR_READSWAP__int64_t(a)	(int64_t)OSReadSwapInt64((void *)a, 0)
 
-__BEGIN_DECLS
+#ifdef __cplusplus
+extern "C" {
+#endif  /* __cplusplus */
 
 static __inline__ float __NDR_READSWAP__float(float *argp) {
 	union {
@@ -130,7 +132,9 @@ static __inline__ double __NDR_READSWAP__double(double *argp) {
 	return result.sv;
 }
 
-__END_DECLS
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
 
 #define __NDR_convert__int_rep__int16_t__defined
 #define __NDR_convert__int_rep__int16_t(v,f)		\

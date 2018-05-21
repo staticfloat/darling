@@ -38,9 +38,11 @@
 #include <mach/kern_return.h>
 #include <mach/mach_types.h>
 
-#include <sys/cdefs.h>
 
-__BEGIN_DECLS
+
+#ifdef __cplusplus
+extern "C" {
+#endif  /* __cplusplus */
 
 #if PRAGMA_MARK
 #pragma mark Basic macros & typedefs
@@ -175,6 +177,8 @@ typedef void * kmod_args_t;
 typedef int kmod_control_flavor_t;
 typedef kmod_info_t * kmod_info_array_t;
 
-__END_DECLS
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
 
 #endif    /* _MACH_KMOD_H_ */

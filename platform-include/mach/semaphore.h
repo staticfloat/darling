@@ -49,8 +49,10 @@
  *					  semaphore_t semaphore);
  */
 
-#include <sys/cdefs.h>
-__BEGIN_DECLS
+
+#ifdef __cplusplus
+extern "C" {
+#endif  /* __cplusplus */
 
 extern	kern_return_t	semaphore_signal     	(semaphore_t semaphore);
 extern	kern_return_t	semaphore_signal_all 	(semaphore_t semaphore);
@@ -72,7 +74,9 @@ extern	kern_return_t	semaphore_signal_thread	(semaphore_t semaphore,
                                                  thread_t thread);
 
 
-__END_DECLS
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
 
 
 #endif	/* _MACH_SEMAPHORE_H_ */

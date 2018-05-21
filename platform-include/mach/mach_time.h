@@ -31,7 +31,7 @@
 
 #include <mach/mach_types.h>
 
-#include <sys/cdefs.h>
+
 
 #include <uuid/uuid.h>
 
@@ -43,7 +43,9 @@ struct mach_timebase_info {
 typedef struct mach_timebase_info	*mach_timebase_info_t;
 typedef struct mach_timebase_info	mach_timebase_info_data_t;
 
-__BEGIN_DECLS
+#ifdef __cplusplus
+extern "C" {
+#endif  /* __cplusplus */
 
 kern_return_t		mach_timebase_info(
 						mach_timebase_info_t	info);
@@ -68,6 +70,8 @@ uint64_t			mach_continuous_time(void);
  */
 __OSX_AVAILABLE(10.12) __IOS_AVAILABLE(10.0) __TVOS_AVAILABLE(10.0) __WATCHOS_AVAILABLE(3.0)
 uint64_t			mach_continuous_approximate_time(void);
-__END_DECLS
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
 
 #endif /* _MACH_MACH_TIME_H_ */

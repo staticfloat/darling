@@ -76,9 +76,11 @@
 #include <mach/mig_errors.h>
 #include <mach/mach_error.h>
 
-#include <sys/cdefs.h>
 
-__BEGIN_DECLS
+
+#ifdef __cplusplus
+extern "C" {
+#endif  /* __cplusplus */
 /*
  * Standard prototypes
  */
@@ -232,6 +234,8 @@ extern voucher_mach_msg_state_t voucher_mach_msg_adopt(mach_msg_header_t *msg);
 
 extern void voucher_mach_msg_revert(voucher_mach_msg_state_t state);
 
-__END_DECLS
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
 
 #endif	/* _MACH_H_ */

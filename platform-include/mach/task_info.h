@@ -72,7 +72,7 @@
 #include <mach/vm_statistics.h> /* for vm_extmod_statistics_data_t */
 #include <Availability.h>
 
-#include <sys/cdefs.h>
+
 
 /*
  *	Generic information structure to allow for expansion.

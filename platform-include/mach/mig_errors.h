@@ -68,7 +68,7 @@
 #include <mach/message.h>
 #include <mach/kern_return.h>
 
-#include <sys/cdefs.h>
+
 
 /*
  *	These error codes should be specified as system 4, subsytem 2.
@@ -104,7 +104,9 @@ typedef struct {
 #pragma pack()
 
 
-__BEGIN_DECLS
+#ifdef __cplusplus
+extern "C" {
+#endif  /* __cplusplus */
 
 #if !defined(__NDR_convert__mig_reply_error_t__defined)
 #define __NDR_convert__mig_reply_error_t__defined
@@ -119,6 +121,8 @@ __NDR_convert__mig_reply_error_t(__unused mig_reply_error_t *x)
 }
 #endif /* !defined(__NDR_convert__mig_reply_error_t__defined) */
 
-__END_DECLS
+#ifdef __cplusplus
+}
+#endif  /* __cplusplus */
 
 #endif	/* _MACH_MIG_ERRORS_H_ */
